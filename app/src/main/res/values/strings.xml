@@ -2,5 +2,6 @@
     <string name="app_name">MoFlix</string>
     <string name="movie_profile">Movie profile</string>
     <string name="actor_profile">Actor </string>
+    <string name="search_here">Search here</string>
 
 </resources>

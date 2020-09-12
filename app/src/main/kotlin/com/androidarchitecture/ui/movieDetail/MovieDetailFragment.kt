@@ -15,7 +15,7 @@ import com.androidarchitecture.utilities.ImageLoader
 import com.androidarchitecture.utilities.expand
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.movie_detail_fragment.*
+import kotlinx.android.synthetic.main.fragment_movie_detail.*
 import kotlinx.android.synthetic.main.movie_details.*
 import javax.inject.Inject
 
@@ -82,7 +82,7 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
 
     }
 
-    override fun getLayoutId() = R.layout.movie_detail_fragment
+    override fun getLayoutId() = R.layout.fragment_movie_detail
 
     override fun subscribeToObservers() {
         viewModel.apply {
