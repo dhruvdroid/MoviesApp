@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#35363A">
+    android:background="@drawable/reverse_gradient">
 
     <TextView
         android:id="@+id/tvIntroduction"
@@ -47,15 +47,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvActors"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="200dp"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingEnd="8dp"
         android:paddingRight="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvActor"
         tools:listitem="@layout/adapter_actors" />
 
@@ -64,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="8dp"
-        android:text="Similars Movies"
+        android:text="Similar Movies"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -74,8 +73,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSimilarMovies"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingEnd="8dp"
