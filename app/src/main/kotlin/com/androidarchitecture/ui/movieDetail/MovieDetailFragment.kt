@@ -3,6 +3,7 @@ package com.androidarchitecture.ui.movieDetail
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androidarchitecture.R
@@ -30,12 +31,18 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initView()
+        // calling the cast API
         viewModel.getCastDetails()
+        // calling the Similar API
         viewModel.getSimilarMovies()
     }
 
+    /**
+     * Initialising views
+     */
     private fun initView() {
         showDetails()
+        // setting up the bottom sheet for the movie details
         bottomSheetBehavior = BottomSheetBehavior.from(flBottomSheet)
         rvActors.apply {
             // use this setting to improve performance if you know that changes
@@ -50,6 +57,7 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
             addItemDecoration(ListDecorator())
         }
 
+        // setting up the Recycler view
         rvSimilarMovies.apply {
             // use this setting to improve performance if you know that changes
             // in content do not change the layout size of the RecyclerView
@@ -73,7 +81,7 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
         }
 
         btBook.setOnClickListener {
-
+            Toast.makeText(context, "WIP", Toast.LENGTH_SHORT).show()
         }
 
         btDetails.setOnClickListener {
@@ -115,8 +123,8 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
         )
     }
 
-    private fun handleLoaderVisibility(isVisible: Boolean) {
-        // loader.visibility = if (isVisible) View.VISIBLE else View.GONE
+    override fun handleLoaderVisibility(isVisible: Boolean) {
+        // TODO("Not yet implemented")
     }
 
     override fun createViewModel() = MovieDetailViewModel::class.java

@@ -36,4 +36,9 @@ dependencies {
     implementation project(path: ':domain')
     implementation dataDependencies.values()
     implementation unitTestDependencies.values()
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

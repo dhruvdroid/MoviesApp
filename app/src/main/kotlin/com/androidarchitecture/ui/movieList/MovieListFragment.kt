@@ -28,8 +28,11 @@ class MovieListFragment : BaseFragment<MoviesListViewModel>() {
         viewModel.getMovies()
     }
 
+    /**
+     * initialising views
+     */
     private fun initViews() {
-        rvUsers.apply {
+        rvMovies.apply {
             // use this setting to improve performance if you know that changes
             // in content do not change the layout size of the RecyclerView
             setHasFixedSize(true)
@@ -52,7 +55,7 @@ class MovieListFragment : BaseFragment<MoviesListViewModel>() {
         }
 
         scrollListener = object :
-            PaginationScrollListener(rvUsers.layoutManager as CustomGridLayoutManager) {
+            PaginationScrollListener(rvMovies.layoutManager as CustomGridLayoutManager) {
             override fun loadMore() {
                 viewModel.getMovies()
             }
@@ -62,7 +65,7 @@ class MovieListFragment : BaseFragment<MoviesListViewModel>() {
             }
         }
 
-        rvUsers.addOnScrollListener(scrollListener)
+        rvMovies.addOnScrollListener(scrollListener)
     }
 
     override fun getLayoutId() = R.layout.movie_list_fragment
@@ -72,14 +75,14 @@ class MovieListFragment : BaseFragment<MoviesListViewModel>() {
         viewModel.data.observe(
             this,
             Observer {
-                (rvUsers.adapter as MovieListAdapter).submitList(it)
+                (rvMovies.adapter as MovieListAdapter).submitList(it)
                 scrollListener.loadCompleted()
             }
         )
         viewModel.errorMessage.observe(this, Observer { showMessage(it) })
     }
 
-    private fun handleLoaderVisibility(isVisible: Boolean) {
+    override fun handleLoaderVisibility(isVisible: Boolean) {
         loader.visibility = if (isVisible) View.VISIBLE else View.GONE
     }
 

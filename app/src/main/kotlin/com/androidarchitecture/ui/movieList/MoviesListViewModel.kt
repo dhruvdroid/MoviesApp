@@ -25,8 +25,7 @@ class MoviesListViewModel @ViewModelInject constructor(
             return
 
         loading.value = true
-        movieListUseCase
-            .getMovies(++pageNum, this::onApiSuccess, this::onApiFailure)
+        movieListUseCase.getMovies(++pageNum, this::onApiSuccess, this::onApiFailure)
     }
 
     private fun onApiSuccess(wrapper: MovieWrapper) {

@@ -20,6 +20,12 @@ data class MovieWrapperResponse(
         movieList.map { it.toMovie() },
         pageNum != totalPage
     )
+
+    fun toFilter(query: String) = MovieWrapper(
+        movieList.filter { it.title.split(" ").any { word -> word.startsWith(query) } }
+            .map { it.toMovie() },
+        pageNum != totalPage
+    )
 }
 
 @Serializable

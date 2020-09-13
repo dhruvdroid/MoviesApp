@@ -77,4 +77,9 @@ dependencies {
     kapt annotationProcessingDependencies.values()
     testImplementation unitTestDependencies.values()
     androidTestImplementation uiTestDependencies.values()
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

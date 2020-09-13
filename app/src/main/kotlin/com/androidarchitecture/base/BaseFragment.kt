@@ -27,6 +27,8 @@ abstract class BaseFragment<M : ViewModel> : Fragment() {
 
     abstract fun createViewModel(): Class<M>
 
+    abstract fun handleLoaderVisibility(isVisible: Boolean)
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

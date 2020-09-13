@@ -44,6 +44,15 @@ class ActorListAdapter(
                 data.image
             )
         }
+
+        /*
+        // val data = currentList[position]
+        holder.itemView.apply {
+            imageLoader.loadCircularImage(
+                ivActor,
+                "http://image.tmdb.org/t/p/w9/cL6JccAYqiZQEAIEFObEUC9LTt7.jpg"
+            )
+        }*/
     }
 
     override fun getItemCount() = currentList.size

@@ -1,9 +1,7 @@
 package com.androidarchitecture.data.retrofit
 
 import com.androidarchitecture.data.entities.CastListWrapperResponse
-import com.androidarchitecture.data.entities.MovieResponse
 import com.androidarchitecture.data.entities.MovieWrapperResponse
-import com.androidarchitecture.domain.models.MovieWrapper
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -14,6 +12,7 @@ interface ApiService {
     companion object {
         const val GET_MOVIES = "movie/now_playing"
         const val GET_MOVIE = "movie/{movie_id}"
+        const val SEARCH_MOVIE = "search/movie"
     }
 
     @GET(GET_MOVIES)
@@ -31,8 +30,13 @@ interface ApiService {
         @Path("movie_id") movieId: Int
     ): Response<CastListWrapperResponse>
 
-        @GET("$GET_MOVIE/similar")
+    @GET("$GET_MOVIE/similar")
     suspend fun getSimilarRecommendations(
         @Path("movie_id") movieId: Int
+    ): Response<MovieWrapperResponse>
+
+    @GET(SEARCH_MOVIE)
+    suspend fun searchMovie(
+        @Query("query") movieQuery: String
     ): Response<MovieWrapperResponse>
 }

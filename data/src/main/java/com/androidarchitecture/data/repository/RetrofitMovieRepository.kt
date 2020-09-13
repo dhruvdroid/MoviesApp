@@ -28,4 +28,10 @@ class RetrofitMovieRepository @Inject constructor(
     override suspend fun getCastDetails(id: Int): Result<ActorWrapper> {
         return parseResult(api.getCastDetails(id)) { it.toActorWrapper() }
     }
+
+    override suspend fun searchMovie(movieQuery: String): Result<MovieWrapper> {
+        return parseResult(api.searchMovie(movieQuery)) { it ->
+            it.toFilter(movieQuery)
+        }
+    }
 }

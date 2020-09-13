@@ -20,7 +20,7 @@ open class BaseRestApiRepository {
     private fun <T> getError(response: Response<T>): ApiException {
         val errorString = response.errorBody()?.toString() ?: ""
         val errorObject = try {
-            json.decodeFromString(errorString)
+            json.decodeFromString<ApiResponseWrapperEntity<Any>>(errorString)
         } catch (e: Exception) {
             ApiResponseWrapperEntity<Any>(
                 status = false,
