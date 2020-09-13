@@ -18,6 +18,6 @@ Dependencies in Use
 
 Known Bugs
 - Pressing back button fragment is again getting reloaded. Need to check navigation component for the same. 
-- Removing the actors default placeholder with some actual refernce.
+- Removing the actors default placeholder with some actual refernce and default launching of RV with scroll to first position
 - Addition of the ROOM DB
 
