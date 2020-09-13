@@ -9,6 +9,7 @@ import java.io.Serializable
 data class Movie(
     var id: Int,
     var image: String,
+    var overview: String,
     var title: String,
     var backdropImage: String,
 ) : Serializable

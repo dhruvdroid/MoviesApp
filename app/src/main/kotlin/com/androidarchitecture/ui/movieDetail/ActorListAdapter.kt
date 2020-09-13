@@ -45,14 +45,13 @@ class ActorListAdapter(
             )
         }
 
-        /*
         // val data = currentList[position]
-        holder.itemView.apply {
-            imageLoader.loadCircularImage(
-                ivActor,
-                "http://image.tmdb.org/t/p/w9/cL6JccAYqiZQEAIEFObEUC9LTt7.jpg"
-            )
-        }*/
+//        holder.itemView.apply {
+//            imageLoader.loadCircularImage(
+//                ivActor,
+//                "http://image.tmdb.org/t/p/w92/9as5Bn8Ej2kyc4oGcmDF1tHFO4i.jpg"
+//            )
+//        }
     }
 
     override fun getItemCount() = currentList.size

@@ -19,6 +19,7 @@ data class CastListWrapperResponse(
         id,
         castResponse.map { it.toActor() }
     )
+
 }
 
 
@@ -31,11 +32,11 @@ data class CastResponse(
 
     fun toActor() = Actor(
         id,
-        name,
         if (profilePath.isNullOrEmpty())
             "https://media.comicbook.com/files/img/default-movie.png"
         else
-            "http://image.tmdb.org/t/p/w9$profilePath"
+            "http://image.tmdb.org/t/p/w92$profilePath",
+        name
     )
 }
 

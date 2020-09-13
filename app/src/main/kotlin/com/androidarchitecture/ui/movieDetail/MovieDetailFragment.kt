@@ -98,6 +98,15 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
             error.observe(this@MovieDetailFragment, Observer { showMessage(it) })
 
             actorData.observe(this@MovieDetailFragment, Observer {
+                if (it.isEmpty()) {
+                    tvActor.visibility = View.GONE
+                    rvActors.visibility = View.GONE
+                    return@Observer
+                }
+
+                tvActor.visibility = View.VISIBLE
+                rvActors.visibility = View.VISIBLE
+
                 (rvActors.adapter as ActorListAdapter).submitList(it)
             })
 
@@ -107,7 +116,8 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
                     rvSimilarMovies.visibility = View.GONE
                     return@Observer
                 }
-
+                tvSimilar.visibility = View.VISIBLE
+                rvSimilarMovies.visibility = View.VISIBLE
                 (rvSimilarMovies.adapter as MovieListAdapter).submitList(it)
             })
 
@@ -117,6 +127,7 @@ class MovieDetailFragment : BaseFragment<MovieDetailViewModel>() {
     private fun showDetails(/*it: Movie*/) {
         val movieData = (viewModel.data as Movie)
         tvMovieTitle.text = movieData.title
+        tvSynopsis.text = movieData.overview
         imageLoader.loadImage(
             ivMoviePoster,
             movieData.backdropImage

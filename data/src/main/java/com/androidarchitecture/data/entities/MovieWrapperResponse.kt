@@ -50,6 +50,7 @@ data class MovieResponse(
             "https://media.comicbook.com/files/img/default-movie.png"
         else
             "http://image.tmdb.org/t/p/w500$posterPath",
+        overview,
         title,
         if (backdropPath.isNullOrEmpty())
             "https://media.comicbook.com/files/img/default-movie.png"
