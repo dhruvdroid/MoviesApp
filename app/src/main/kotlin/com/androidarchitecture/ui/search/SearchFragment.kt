@@ -51,7 +51,7 @@ class SearchFragment : BaseFragment<SearchFragmentViewModel>() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         intiView()
-        (rvSearch.adapter as SearchListAdapter).submitList(emptyList())
+        // (rvSearch.adapter as SearchListAdapter).submitList(emptyList())
     }
 
     private fun intiView() {
