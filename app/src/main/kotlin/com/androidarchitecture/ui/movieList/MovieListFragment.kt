@@ -41,7 +41,7 @@ class MovieListFragment : BaseFragment<MoviesListViewModel>() {
             layoutManager =
                 CustomGridLayoutManager(
                     context,
-                    3
+                    2
                 )
 
             adapter =
