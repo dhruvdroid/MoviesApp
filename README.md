@@ -22,3 +22,12 @@ Improvisation
 - Addition of the ROOM DB
 
 ![alt text](https://github.com/dhruvdroid/ImageRepo/blob/main/ContentDetails.jpeg)
+
+
+![alt text](https://github.com/dhruvdroid/ImageRepo/blob/main/ContentDetailsScreen.jpeg)
+
+
+![alt text](https://github.com/dhruvdroid/ImageRepo/blob/main/ExtendedScreenshot.jpeg)
+
+
+![alt text](https://github.com/dhruvdroid/ImageRepo/blob/main/GenreSpecific.mp4)
