@@ -29,5 +29,3 @@ Improvisation
 
 ![alt text](https://github.com/dhruvdroid/ImageRepo/blob/main/ExtendedScreenshot.jpeg)
 
-
-![alt text](https://github.com/dhruvdroid/ImageRepo/blob/main/GenreSpecific.mp4)
