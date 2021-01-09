@@ -33,4 +33,16 @@
         android:name="com.androidarchitecture.ui.search.SearchFragment"
         android:label="SearchFragment" />
 
+
+    <fragment
+        android:id="@+id/downloads"
+        android:name="com.androidarchitecture.ui.downloads.DownloadFragment"
+        android:label="DownloadFragment" />
+
+
+    <fragment
+        android:id="@+id/comingSoon"
+        android:name="com.androidarchitecture.ui.comingSoon.ComingSoonFragment"
+        android:label="ComingSoonFragment" />
+
 </navigation>
