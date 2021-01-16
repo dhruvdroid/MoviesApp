@@ -13,6 +13,7 @@ interface ApiService {
         const val GET_MOVIES = "movie/now_playing"
         const val GET_MOVIE = "movie/{movie_id}"
         const val SEARCH_MOVIE = "search/movie"
+        const val TRENDING = "/trending/{media_type}/{time_window}"
     }
 
     @GET(GET_MOVIES)
@@ -39,4 +40,11 @@ interface ApiService {
     suspend fun searchMovie(
         @Query("query") movieQuery: String
     ): Response<MovieWrapperResponse>
+
+    @GET(TRENDING)
+    suspend fun getTrending(
+        @Path("media_type") mediaType: String, // all, movie, tv, person
+        @Path("time_window") timeWindow: String // day, week
+    ): Response<MovieWrapperResponse>
+
 }
