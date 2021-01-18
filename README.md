@@ -5,7 +5,6 @@ Consist of three main layer (3 Project modules with dependency between them)
 - Domain (Usecase)
 - Data - Data source (Rest API, Local DB)
 
-
 Reference : https://antonioleiva.com/clean-architecture-android/
 
 Dependencies in Use
