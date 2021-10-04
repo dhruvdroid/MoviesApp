@@ -26,6 +26,8 @@ class MovieListFragment : BaseFragment<MoviesListViewModel>() {
         super.onActivityCreated(savedInstanceState)
         initViews()
         viewModel.getMovies()
+
+
     }
 
     /**

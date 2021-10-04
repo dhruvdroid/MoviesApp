@@ -14,6 +14,8 @@ interface ApiService {
         const val GET_MOVIE = "movie/{movie_id}"
         const val SEARCH_MOVIE = "search/movie"
         const val TRENDING = "/trending/{media_type}/{time_window}"
+        const val REVIEWS = "/review/{review_id}"
+        
     }
 
     @GET(GET_MOVIES)
@@ -46,5 +48,9 @@ interface ApiService {
         @Path("media_type") mediaType: String, // all, movie, tv, person
         @Path("time_window") timeWindow: String // day, week
     ): Response<MovieWrapperResponse>
+
+    // reviews API
+
+
 
 }
